@@ -20,6 +20,7 @@
   var bowser = window.bowser;
   var screenfull = window.screenfull;
   var data = window.APP_DATA;
+  let asset_url = data.asset_url
 
   // Grab elements from DOM.
   var panoElement = document.querySelector('#pano');
@@ -72,7 +73,7 @@
 
   // Create scenes.
   var scenes = data.scenes.map(function(data) {
-    var urlPrefix = "https://wildlife-asset.facsiaginsa.com";
+    var urlPrefix = asset_url;
     var source = Marzipano.ImageUrlSource.fromString(
       urlPrefix + "/" + data.id + "/{z}/{f}/{y}/{x}.jpg",
       { cubeMapPreviewUrl: urlPrefix + "/" + data.id + "/preview.jpg" });

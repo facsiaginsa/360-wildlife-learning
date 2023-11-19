@@ -1,3 +1,5 @@
+const { ASSET_URL } = require("../configs")
+
 const selectWorldData = async () => {
     let data = {
         "scenes": [
@@ -159,6 +161,7 @@ const selectWorldData = async () => {
           }
         ],
         "name": "360 Wildlife",
+        "asset_url": ASSET_URL,
         "settings": {
           "mouseViewMode": "drag",
           "autorotateEnabled": true,
