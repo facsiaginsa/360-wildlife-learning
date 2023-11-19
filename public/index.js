@@ -72,7 +72,7 @@
 
   // Create scenes.
   var scenes = data.scenes.map(function(data) {
-    var urlPrefix = "public/tiles";
+    var urlPrefix = "https://wildlife-asset.facsiaginsa.com";
     var source = Marzipano.ImageUrlSource.fromString(
       urlPrefix + "/" + data.id + "/{z}/{f}/{y}/{x}.jpg",
       { cubeMapPreviewUrl: urlPrefix + "/" + data.id + "/preview.jpg" });
@@ -315,7 +315,7 @@
     var closeWrapper = document.createElement('div');
     closeWrapper.classList.add('info-hotspot-close-wrapper');
     var closeIcon = document.createElement('img');
-    closeIcon.src = 'public/  /close.png';
+    closeIcon.src = 'public/img/close.png';
     closeIcon.classList.add('info-hotspot-close-icon');
     closeWrapper.appendChild(closeIcon);
 
@@ -386,7 +386,16 @@
     return null;
   }
 
-  // Display the initial scene.
-  switchScene(scenes[0]);
+  const urlParams = new URLSearchParams(window.location.search);
+  const scene = urlParams.get('scene');
+
+  if (scene) {
+    switchScene(scenes[Number(scene)])
+  } else {
+    // Display the initial scene.
+    switchScene(scenes[0]);
+  }
+  
+  
 
 })();

@@ -1,12 +1,15 @@
 const { PORT, HOST } = require("./configs");
 const { healthCheck } = require("./controllers/healthCheck");
+const { getHomeController } = require("./controllers/main");
+const { getWorldDataController } = require("./controllers/world");
 const app = require("./loaders/fastify");
+
 
 app.get("/health-check", healthCheck)
 
-app.get("/", (req, reply) => {
-    reply.view("index.ejs");
-});
+app.get("/", getHomeController)
+
+app.get("/360-world", getWorldDataController);
 
 app.listen({
     port: PORT,
