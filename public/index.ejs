@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="/public/vendor/reset.min.css">
+<link rel="stylesheet" href="/public/style.css">
+</head>
+<body class="multiple-scenes view-control-buttons">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-sea-lions-world">
+        <li class="text">Sea Lion&#39;s World</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-fishs-world">
+        <li class="text">Fish&#39;s World</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-cattles-world">
+        <li class="text">Cattle&#39;s World</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="/public/img/play.png">
+  <img class="icon on" src="/public/img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="/public/img/fullscreen.png">
+  <img class="icon on" src="/public/img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="/public/img/expand.png">
+  <img class="icon on" src="/public/img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="/public/img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="/public/img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="/public/img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="/public/img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="/public/img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="/public/img/minus.png">
+</a>
+
+<script src="/public/vendor/screenfull.min.js" ></script>
+<script src="/public/vendor/bowser.min.js" ></script>
+<script src="/public/vendor/marzipano.js" ></script>
+
+<script src="/public/data.js"></script>
+<script src="/public/index.js"></script>
+
+</body>
+</html>
